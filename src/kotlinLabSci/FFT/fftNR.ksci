@@ -1,0 +1,18 @@
+import kotlinLabSci.FFT.FFTNR.fft
+import kotlinLabSci.FFT.FFTNR.ifft
+
+
+var t = vlinspace(0.0, 100.0, 10000)
+var x = sin(0.56*t)+ cos(2.3*t)
+plot(t,x)
+
+var y = fft(x)
+
+var reals = y.realFFTs
+var imags = y.imFFTs
+
+var recons = ifft(reals, imags)
+
+figure(2)
+subplot(2,1,1); plot(x); title("Original Signal");
+subplot(2,1,2); plot(recons); title( "reconstructed signal");

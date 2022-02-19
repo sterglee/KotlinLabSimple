@@ -1,0 +1,6 @@
+
+   // create the data arrays
+   var xx = Vec(doubleArrayOf(0.4, 3.5, 6.7,  8.6, 9.8, 15.6, 26.8, 45.8,5.66, -3.44, 9.334, 8.44,-7.8, 99.33, -20.44 ))
+   var yy = 3.4*xx + 6.5*vrand(xx.length())
+
+plot(xx, yy)

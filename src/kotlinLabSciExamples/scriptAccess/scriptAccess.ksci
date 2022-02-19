@@ -1,0 +1,17 @@
+
+var x = vrand(9000) 
+plot(x)
+    
+// test that we can access standard libraries on the classpath 
+var y= Vrand(9000)
+ var  fpj = cern.colt.Arrays.toString(y)
+ println(fpj)
+
+// test that we can access additional libraries as toolboxes
+var  rshell =   org.jetbrains.bio.statistics.MoreMath.factorialLog(9)  // access this function in Java with JShell
+
+
+
+
+var  rkotlin =   org.jetbrains.bio.statistics.MoreMath.factorialLog(9)  // access this function in Kotlin
+println(rkotlin)

@@ -1,0 +1,172 @@
+
+// some Kotlin scripts, execute with F10
+println("Hello Kotlin");
+
+
+val things = listOf("foo", "bar", "goo")
+println(things::class)
+println(things)
+
+
+var x=ones(9,9)
+
+println(x)
+var xx=sin(x)
+
+
+var xx = x*x
+println(xx)
+var v=vrand(90000)
+plot(v)
+var N=10
+var x=rand1d(N,N)
+
+var N:Int=Math.pow(2.0,16.0).toInt()
+println(N)
+
+var xx=Rand(N)
+println(xx.size)
+var fx = sfft(xx)
+
+plot(fx)
+var nfx  = fftMag(xx)
+
+var xx =ones1d(N,N)
+tic()
+var xxx= xx*xx
+var tm=toc()
+println(tm)
+println(xxx)
+
+tic()
+var sm=0.0
+var N=100000000
+for (k in 0..N-1)
+  sm+=0.00455*k
+  println("sum = "+sm)
+var tm=toc()
+println("tm = "+tm)
+
+
+fun local() {
+tic()
+var sm=0.0
+var N=100000000
+for (k in 0..N-1)
+  sm+=0.00455*k
+  println("sum = "+sm)
+var tm=toc()
+println("tm = "+tm)
+}
+local()
+
+tic();
+double sm=0.0;
+int N=10000000;
+for (int k=0;k<N;k++)
+  sm+=0.00455*k;
+  var tm=toc();
+  System.out.println("sum = "+sm);
+
+System.out.println("tm = "+tm);
+
+
+
+tic();
+double sm=0.0;
+int N=10000000;
+for (int k=0;k<N;k++)
+  sm+=0.00455*k;
+  System.out.println("sum = "+sm);
+var tm=toc();
+System.out.println("tm = "+tm);
+
+
+public void process(Runnable r) {
+	r.run();
+}
+
+process( ()->System.out.println("hi"); );
+
+var N=3000;
+
+var x = rand(N,N);
+
+tic();
+var xx = x.multiply(x);
+var tm=toc();
+
+
+
+import org.jblas.*;
+
+
+    DoubleMatrix A = new DoubleMatrix(2, 2, 3.0, -3.0, 1.0, 1.0);
+
+    ComplexDoubleMatrix E = Eigen.eigenvalues(A);
+
+    ComplexDoubleMatrix[] EV = Eigen.eigenvectors(A);
+
+    ComplexDoubleMatrix X = EV[0];
+    ComplexDoubleMatrix L = EV[1];
+
+    X
+
+
+    N=20
+    x=rand(N,N)
+    y=x*x
+    a=x(1,1)
+
+
+//int N= 2000;
+
+
+//var x = new DMatrixRMaj(N,N);
+
+var N=4000;
+  var rand = new Random(0xBEEF);
+        DMatrixRMaj A = RandomMatrices_DDRM.rectangle(N,N,-1,1,rand);
+        DMatrixRMaj B = RandomMatrices_DDRM.rectangle(A.numCols,N,-1,1,rand);
+        DMatrixRMaj C = new DMatrixRMaj(1,1);
+
+         System.out.println("Matrix Multiply, threads="+EjmlConcurrency.getMaxThreads());
+        long time0 = System.currentTimeMillis();
+        tic();
+        CommonOps_MT_DDRM.mult(A,B,C);
+        long time1 = System.currentTimeMillis();
+        System.out.println("Elapsed time "+(time1-time0)+" (ms)");
+        var tm=toc();
+
+
+        var A2=ones(N,N);
+        tic();
+        var AA2=A2.multiply(A2);
+        var tm2=toc();
+
+        
+        // Set it to two threads
+        EjmlConcurrency.setMaxThreads(2);
+        System.out.println("Matrix Multiply, threads="+EjmlConcurrency.getMaxThreads());
+        long time2 = System.currentTimeMillis();
+        tic();
+        CommonOps_MT_DDRM.mult(A,B,C);
+        var tm3=toc();
+        long time3 = System.currentTimeMillis();
+        System.out.println("Elapsed time "+(time3-time2)+" (ms)");
+
+
+
+        // Then let's compare it against the single thread implementation
+        System.out.println("Matrix Multiply, Single Thread");
+        long time4 = System.currentTimeMillis();
+        tic();
+        CommonOps_DDRM.mult(A,B,C);
+        var tm4=toc();
+        long time5 = System.currentTimeMillis();
+        System.out.println("Elapsed time "+(time5-time4)+" (ms)");
+
+
+
+
+    
