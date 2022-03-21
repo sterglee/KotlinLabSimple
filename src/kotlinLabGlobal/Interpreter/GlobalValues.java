@@ -31,7 +31,7 @@ import java.util.concurrent.Executors;
 public   class GlobalValues
 {  
     
-   static public   String  dateOfBuild = "9-March-22";       // tracks the date of build
+   static public   String  dateOfBuild = "21-March-22";       // tracks the date of build
 
     static public ScriptEngineManager manager;  // used for RS223 Kotlin scripting
     static public ScriptEngine  kotlinEngine;   // used for RS223 Kotlin scripting
@@ -196,6 +196,7 @@ public   class GlobalValues
             "import kotlinLabSci.math.array.JILapack.*; ",
             "import Jama.*;",
             "import kotlinLabSci.math.plot.plot.*;  ",     // plotting routines
+            "import kotlinLabSci.math.plot.kplot.Companion.kplot; ",
             "import kotlinLabSciCommands.BasicCommands.*;   ",
 
             "import kotlinLabSci.math.array.MatrixConvs.*;   ",
