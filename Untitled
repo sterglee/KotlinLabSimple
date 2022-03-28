@@ -37,5 +37,24 @@ subplot(3,2,6)
 plot(t2, x4*8.77+x3)
 title("x4*8.77+x3")
 
-
+/*
 kotlinLabSci.math.plot.kplot.kplot(vrand(100).v, vrand(100).v)
+
+
+
+import jdk.incubator.vector.FloatVector
+import jdk.incubator.vector.Vector
+//import jdk.incubator.vector.Shapes
+
+
+fun addArrays(left: Array<Double>, right: Array<Double>, res: Array<Double>): Unit {
+	println("hi")
+}
+
+var x= doubleArrayOf(3.4, 5.6, -3.4)
+var y = doubleArrayOf(2.3, -22.2, 8.9)
+var z= doubleArrayOf(2.3, -22.2, 8.9)
+addArrays(x,y,z)
+
+
+*/
