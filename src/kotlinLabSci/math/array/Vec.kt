@@ -5,12 +5,16 @@ import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.*
 import java.util.stream.DoubleStream
+import jdk.incubator.vector.DoubleVector
+import jdk.incubator.vector.VectorSpecies
+
 
 // Vectors are dynamically resizable while double[] arrays are not
 class Vec {
     @JvmField
     var v: kotlin.DoubleArray
     var len = 0
+
 
     constructor(n: Int) {
         v = DoubleArray(n)
@@ -163,6 +167,14 @@ class Vec {
     }
 
     operator fun plus(that: Vec): Vec {
+        val thislen = length()
+        val vp = DoubleArray(thislen)
+        val vthat = that.getv()
+        for (k in 0 until thislen) vp[k] = v[k] + vthat[k]
+        return Vec(vp, true)
+    }
+
+  fun vecplus(that: Vec): Vec {
         val thislen = length()
         val vp = DoubleArray(thislen)
         val vthat = that.getv()
@@ -357,6 +369,7 @@ public String toString() {
 
     companion public object VecOps {
         const val mxVecLenToString = 100
+
 
         // construct a zero-indexed Vec from values, e.g. 
         //  v = V(3.4, -6.7, -1.2, 5.6)
