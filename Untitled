@@ -45,7 +45,7 @@ kotlinLabSci.math.plot.kplot.kplot(vrand(100).v, vrand(100).v)
 import jdk.incubator.vector.FloatVector
 import jdk.incubator.vector.Vector
 //import jdk.incubator.vector.Shapes
-
+(
 
 fun addArrays(left: Array<Double>, right: Array<Double>, res: Array<Double>): Unit {
 	println("hi")
@@ -58,3 +58,34 @@ addArrays(x,y,z)
 
 
 */
+
+import org.ejml.data.*
+var N=3000
+var xx =  Ones(N,N)
+var x = DMatrixRMaj(xx)
+
+var yy=Ones(N,N)
+var y=DMatrixRMaj(yy)
+
+
+var zz=Ones(N,N)
+var z=DMatrixRMaj(zz)
+
+// perform scalar multiplication
+tic()
+benchmark.MatrixMultiplication.mult_ikj(x,y,z)
+var tmscalar = toc()
+
+// perform vector multiplication
+tic()
+benchmark.MatrixMultiplication.mult_ikj_vector(x, y, z)
+var tmvector= toc()
+
+println("tmsclar = $tmscalar, tmvector = $tmvector")
+
+
+
+
+
+
+
