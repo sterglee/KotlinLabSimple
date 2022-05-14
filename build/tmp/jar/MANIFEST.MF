@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Class-Path: lib/annotations-13.0.jar lib/annotations-16.0.1.jar lib/Apac
+ heCommonMaths.jar lib/arpack_combo-0.1.jar lib/autocomplete-2.5.4.jar l
+ ib/ejml-cdense-0.40.jar lib/ejml-core-0.40.jar lib/ejml-ddense-0.40.jar
+  lib/ejml-dsparse-0.40.jar lib/ejml-experimental-0.40.jar lib/ejml-fden
+ se-0.40.jar lib/ejml-simple-0.40.jar lib/ejml-zdense-0.40.jar lib/f2jut
+ il.jar lib/fjbg.jar lib/forkjoin.jar lib/funclate-131.jar lib/itext-2.1
+ .5.jar lib/jansi-1.6.jar lib/jarjar-1.1.jar lib/JASYMCA.jar lib/javacpp
+ .jar lib/javax.annotation-api-1.3.2.jar lib/JFreeChart.jar lib/jhall.ja
+ r lib/jline-2.11.jar lib/jna-4.0.0.jar lib/jSciJPlasmaJSparseJTransform
+ s.jar lib/junit-4.11.jar lib/language_support.jar lib/lets-plot.jar lib
+ /lombok-1.14.8.jar lib/matlabscilab.jar lib/MTJColtSGTJCUDA.jar lib/net
+ lib-java-0.9.3.jar lib/NumericalRecipesNUMAL.jar lib/objenesis-1.2.jar 
+ lib/openblas-platform.jar lib/openblas.jar lib/optimization.jar lib/par
+ celize-compiler.jar lib/PDFRenderer.jar lib/rhino-1.7R4.jar lib/rsyntax
+ textarea-2.5.6.jar lib/stringtemplate-3.2.1.jar lib/viktor.jar libkotli
+ n/allopen-compiler-plugin.jar libkotlin/android-extensions-compiler.jar
+  libkotlin/android-extensions-runtime.jar libkotlin/annotations-13.0.ja
+ r libkotlin/jvm-abi-gen.jar libkotlin/kotlin-annotation-processing-cli.
+ jar libkotlin/kotlin-annotation-processing-runtime.jar libkotlin/kotlin
+ -annotation-processing.jar libkotlin/kotlin-annotations-jvm.jar libkotl
+ in/kotlin-ant.jar libkotlin/kotlin-compiler.jar libkotlin/kotlin-daemon
+ -client.jar libkotlin/kotlin-daemon.jar libkotlin/kotlin-imports-dumper
+ -compiler-plugin.jar libkotlin/kotlin-main-kts.jar libkotlin/kotlin-pre
+ loader.jar libkotlin/kotlin-reflect.jar libkotlin/kotlin-runner.jar lib
+ kotlin/kotlin-script-runtime.jar libkotlin/kotlin-scripting-common.jar 
+ libkotlin/kotlin-scripting-compiler-impl.jar libkotlin/kotlin-scripting
+ -compiler.jar libkotlin/kotlin-scripting-jvm.jar libkotlin/kotlin-stdli
+ b.jar libkotlin/kotlinx-coroutines-core-jvm.jar libkotlin/kotlinx-seria
+ lization-compiler-plugin.jar libkotlin/lombok-compiler-plugin.jar libko
+ tlin/mutability-annotations-compat.jar libkotlin/noarg-compiler-plugin.
+ jar libkotlin/parcelize-compiler.jar libkotlin/parcelize-fir.jar libkot
+ lin/parcelize-runtime.jar libkotlin/sam-with-receiver-compiler-plugin.j
+ ar libkotlin/trove4j.jar
+Main-Class: kotlinLabExec.kotlinLab.kotlinLab
+

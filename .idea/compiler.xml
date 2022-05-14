@@ -8,6 +8,6 @@
     <bytecodeTargetLevel target="16" />
   </component>
   <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_STRING" value="--add-modules=jdk.incubator.vector" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="--add-modules jdk.incubator.vector" />
   </component>
 </project>

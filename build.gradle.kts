@@ -4,7 +4,7 @@ plugins {
 
     java
     application
-    kotlin("jvm") version "1.5.31"
+    kotlin("jvm") version "1.7.0-Beta"
 }
 java {
     toolchain {
