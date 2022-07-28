@@ -1,0 +1,31 @@
+
+
+ /**
+    * CODE CHALLENGE: Solve the String Composition Problem.
+    *Input: An integer k and a string Text.
+      *Output: Compositionk(Text) (the k-mers can be provided in any order).
+
+    *Sample Input:
+      *4
+      *CAATCCAAC
+    *Sample Output:
+      *CAATC
+      *AATCC
+      *ATCCA
+      *TCCAA
+      *CCAAC
+  */
+
+
+fun  composition(k:Int,  text:String):  List<String>  {
+    var kmers = Array<String>(text.length - k ) {""}   // preallocate for performance
+    for (i  in 0..text.length - k-1) {
+      kmers[i] = text.substring(i..i + k)
+    }
+    return kmers.distinct().sorted()
+  }
+
+
+  val comp = composition(4, "CAATCCAAC")
+
+  comp

@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Class-Path: lib/javax.annotation-api-1.3.2.jar lib/jansi-1.6.jar lib/net
+ lib-java-0.9.3.jar lib/PDFRenderer.jar lib/arpack_combo-0.1.jar lib/JFr
+ eeChart.jar lib/rhino-1.7R4.jar lib/ApacheCommonMaths.jar lib/jhall.jar
+  lib/autocomplete-2.5.4.jar libkotlin/jline.jar lib/jSciJPlasmaJSparseJ
+ Transforms.jar lib/rsyntaxtextarea-2.5.6.jar lib/annotations-13.0.jar l
+ ib/lombok-1.14.8.jar lib/itext.jar  lib/MTJColtSGTJCUDA
+ .jar lib/language_support.jar lib/JASYMCA.jar lib/jarjar-1.1.jar lib/pa
+ rcelize-compiler.jar lib/stringtemplate-3.2.1.jar lib/objenesis-1.2.jar
+  lib/annotations-16.0.1.jar lib/optimization.
+ jar lib/funclate-131.jar lib/jna-4.0.0.jar lib/NumericalRecipesNUMAL.ja
+ r lib/f2jutil.jar lib/junit-4.11.jar lib/javacpp.jar lib/matlabscilab.j
+ ar lib/fjbg.jar lib/forkjoin.jar lib/victor.jar lib/ejml-cdense-0.40.ja
+ r lib/ejml-core-0.40.jar lib/ejml-ddense-0.40.jar lib/ejml-dsparse-0.40
+ .jar lib/ejml-experimental-0.40.jar lib/ejml-fdense-0.40.jar lib/ejml-s
+ imple-0.40.jar lib/ejml-zdense-0.40.jar libkotlin/kotlinx-coroutines-co
+ re.jar libkotlin/trove4j.jar libkotlin/kotlin-reflect.jar libkotlin/kot
+ lin-compiler.jar libkotlin/kotlin-scripting-compiler-impl.jar libkotlin
+ /kotlin-daemon.jar libkotlin/kotlin-scripting-compiler.jar libkotlin/ko
+ tlin-scripting-common.jar libkotlin/kotlin-scripting-jvm.jar libkotlin/
+ kotlin-runner.jar libkotlin/kotlin-preloader.jar libkotlin/kotlin-annot
+ ation-processing-runtime.jar libkotlin/allopen-compiler-plugin.jar libk
+ otlin/kotlin-daemon-client.jar libkotlin/kotlin-main-kts.jar libkotlin/
+ parcelize-compiler.jar libkotlin/parcelize-runtime.jar libkotlin/kotlin
+ -ant.jar libkotlin/kotlin-script-runtime.jar libkotlin/kotlin-annotatio
+ n-processing-cli.jar libkotlin/jvm-abi-gen.jar libkotlin/kotlin-stdlib.
+ jar libkotlin/kotlin-scripting-jvm.jar
+Main-Class: kotlinLabExec.kotlinLab.kotlinLab
+

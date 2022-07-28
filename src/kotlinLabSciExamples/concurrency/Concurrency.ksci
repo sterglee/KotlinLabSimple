@@ -1,0 +1,67 @@
+
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+
+fun main() {
+  GlobalScope.launch {
+    delay(1000)
+    println("Hello World")
+  }
+  println("Done")
+}
+
+main()
+
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+
+fun maink() {
+	var cnt=1
+
+  val job = GlobalScope.launch {
+   for (k in 1..100000)
+    GlobalScope.launch {
+    cnt += 1
+    }
+  }
+  runBlocking {
+    job.join()
+    println("cnt = $cnt")
+  }
+}
+
+maink()
+
+
+import java.util.*
+import java.util.concurrent.BlockingQueue
+import java.util.concurrent.Executors
+import java.util.concurrent.LinkedBlockingDeque
+import kotlin.concurrent.thread
+
+
+fun main() {
+	var cnt=1
+
+   for (k in 1..100000)
+    thread (start=true) {
+    cnt += 1
+    }
+  
+    println("cnt = $cnt")
+  
+}
+
+tic()
+main()
+var tmthreads=toc()
+
+tic()
+maink()
+var tmk=toc()
+
+println("time threads = $tmthreads, tmcoroutines = $tmk")
+10/0.06 

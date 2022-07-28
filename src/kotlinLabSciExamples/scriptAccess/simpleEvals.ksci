@@ -1,0 +1,60 @@
+
+val seq = sequenceOf(1,2,3)
+val filtered = seq.filter { print("f$it "); it % 2 == 1 }
+println(filtered)
+filtered.toList()
+
+
+sequenceOf(1,2,3).filter { print("F$it, "); it % 2 == 1 }
+                              .map { print(" M$it, "); it * 2 }
+                              .forEach { print("E$it, ") }
+
+
+listOf(1,2,3).filter { print("F$it, "); it % 2 == 1 }
+                    .map { print("M$it, "); it * 2 }
+                    .forEach { print("E$it, ") }
+
+
+
+for (e in listOf(1,2,3)) {
+	  print("F$e, ")
+	  if (e % 2 == 1) {
+	  	print ("M$e, ")
+	  	val mapped = e*2
+	  	print("E$mapped,")
+	  }
+}
+
+
+(1..10).asSequence()
+    .filter { print("F$it, "); it % 2 == 1 }
+    .map { print("M$it, "); it*2 }
+    .find { it > 5 }
+
+
+(1..10).filter {print("F$it, "); it % 2 == 1 }
+      .map { print("M$it, "); it*2 }
+      .find { it > 5 }
+
+
+generateSequence(1)  { it+1 }
+   .map { it * 2 }
+   .take(10)
+   .forEach { print("$it, ") }
+
+
+val fibonacci = sequence {
+	  yield (1)
+	  var current = 1
+	  var prev = 1
+	  while (true) {
+	  	yield(current)
+	  	val temp = prev
+	  	prev = current
+	  	current += temp
+	  }
+}
+print(fibonacci.take(10).toList())
+
+
+
