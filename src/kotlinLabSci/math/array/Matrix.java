@@ -43,6 +43,13 @@ import org.ejml.data.DMatrixRMaj;
 import org.ejml.dense.row.CommonOps_DDRM;
 
 
+import jdk.incubator.vector.DoubleVector;
+import jdk.incubator.vector.VectorSpecies;
+import org.ejml.data.DMatrix1Row;
+import org.ejml.data.ZMatrixRMaj;
+
+
+
 public class Matrix   {
 
     // The storage of data as double [][] array. We can manipulate it directly for efficiency.
@@ -4566,18 +4573,24 @@ final public Matrix times( double [] that) {
     }
 
 
-    final public Matrix multiply( Matrix that)  {
+    final public Matrix multiplyPar( Matrix that)  {
 
     return   new Matrix( ParallelMult.pmul(this.d, that.d));
     }
-       /*
+
+
+
+    final public Matrix multiply(Matrix that) {
+
         var Rows = this.fnrows; var Cols = this.fncols;
         var tRows = that.fnrows; var tCols = that.fncols;
 
-        var jthis = new org.jblas.DoubleMatrix(this.d);
-        var jthat = new org.jblas.DoubleMatrix(that.d);
+        var jthis = new org.ejml.data.DMatrixRMaj(this.d);
+        var jthat = new org.ejml.data.DMatrixRMaj(that.d);
+        var res = new org.ejml.data.DMatrixRMaj(Rows, tCols);
 
-        var res = jthis.mul(jthat);
+        benchmark.MatrixMultiplication.mult_ikj_vector(jthis, jthat, res);
+
 
         var mres = new Matrix(Rows, tCols);
         for (int r=0; r<Rows;r++)
@@ -4586,7 +4599,6 @@ final public Matrix times( double [] that) {
         return mres;
 
     }
-*/
 
 
 /*

@@ -21,6 +21,19 @@ lineSpecs = ":r"
 plot(t,x11, lineSpecs)
 
 
+var n=3000
+var x= ones(n,n)
+
+tic()
+var xx=x*x
+var tm=toc()
+
+
+var x2= ones1d(n,n)
+
+tic()
+var xx2=x2*x2
+var tm2=toc()
 
 // create a new figure and preform a plot at subplot 3,2,1
   figure(3)

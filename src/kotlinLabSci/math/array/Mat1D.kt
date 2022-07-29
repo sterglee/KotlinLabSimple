@@ -5,9 +5,11 @@
 // Also, some native optimized C libraries and NVIDIA CUDA support is offered for faster maths.
 package kotlinLabSci.math.array
 
+import benchmark.MatrixMultiplication
 import edu.emory.mathcs.utils.ConcurrencyUtils
-import kotlinLabSci.PrintFormatParams
 import kotlinLabGlobal.Interpreter.GlobalValues
+import kotlinLabSci.PrintFormatParams
+import org.ejml.data.DMatrixRMaj
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.*
@@ -57,7 +59,7 @@ class Mat1D {
         return    multiply(that)
     }
 
-     fun multiply(that: Mat1D): Mat1D {
+     fun multiplyJBLAS(that: Mat1D): Mat1D {
 
          var thisTwoD = this.toDoubleArray()
          var thatTwoD = that.toDoubleArray()
@@ -71,6 +73,21 @@ class Mat1D {
 
          return res;
      }
+
+
+    fun multiply(that: Mat1D): Mat1D {
+        val Rows: Int = this.Nrows
+        val Cols: Int = this.Ncols
+        val tRows = that.Nrows
+        val tCols = that.Ncols
+        val jthis: DMatrixRMaj = DMatrixRMaj(this.toDoubleArray())
+        val jthat = DMatrixRMaj(that.toDoubleArray())
+        val res = DMatrixRMaj(Rows, tCols)
+        MatrixMultiplication.mult_ikj_vector(jthis, jthat, res)
+        val mres = Mat1D(Rows, tCols)
+        for (r in 0 until Rows) for (c in 0 until tCols) mres.putAt(r, c, res[r, c])
+        return mres
+    }
 
     fun numRows(): Int {
         return Nrows
